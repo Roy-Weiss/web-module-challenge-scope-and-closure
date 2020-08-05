@@ -27,12 +27,13 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ * Counter2 is globally scoped and counter1 is function scoped.
  * 
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * Counter2 because it is using a globally scoped variable.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *Counter1 would be preferable when you only want to use a variable inside of a particular function.
+ *Counter2 would be preferable when you want to use outside variables in a function.
  */
 
 // counter1 code
@@ -41,6 +42,7 @@ function counterMaker() {
     return function counter() {
         return count++;
     }
+
 }
 
 const counter1 = counterMaker();
